@@ -24,7 +24,7 @@ resource "azurerm_virtual_network" "network" {
     for_each = module.subnet_addrs.network_cidr_blocks
     content {
       name           = subnet.key
-      address_prefix = subnet.value
+      address_prefixes = subnet.value
       security_group = var.security_group
     }
   }
