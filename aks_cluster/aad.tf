@@ -6,7 +6,7 @@ resource "azuread_application" "aks_sp_application" {
 
 resource "azuread_service_principal" "aks_sp" {
   count          = local.use_aks_sp ? 1 : 0
-  application_id = azuread_application.aks_sp_application[0].application_id
+  client_id = azuread_application.aks_sp_application[0].application_id
 }
 
 resource "azuread_service_principal_password" "aks_sp_password" {
