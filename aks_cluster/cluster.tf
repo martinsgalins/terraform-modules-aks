@@ -126,7 +126,7 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     var.additional_tags,
     {
       cluster-name  = var.cluster_name
-      module-source = "github.com/FairwindsOps/azure-terraform-modules/aks_cluster"
+      module-source = "github.com/martinsgalins/terraform-modules-aks/aks_cluster"
       created-by    = "Terraform"
   })
 }
