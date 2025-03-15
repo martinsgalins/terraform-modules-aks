@@ -39,6 +39,6 @@ resource "azurerm_virtual_network" "network" {
 
   tags = merge(var.additional_tags, {
     created-by    = "Terraform"
-    module-source = "github.com/FairwindsOps/azure-terraform-modules/virtual-network"
+    module-source = "github.com/martinsgalins/terraform-modules-aks/virtual-network"
   })
 }
