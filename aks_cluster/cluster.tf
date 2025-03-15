@@ -39,7 +39,7 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     }
   }
 
-  role_based_access_control {
+  azure_active_directory_role_based_access_control {
     enabled = var.enable_rbac
     dynamic "azure_active_directory" {
       for_each = var.enable_aad_auth == false ? [] : list(var.enable_aad_auth)
